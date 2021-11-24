@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shippori+Antique+B1&display=swap");
+
+/* font-family: "Roboto", sans-serif;
+font-family: 'Shippori Antique B1', sans-serif; */
+
+:root {
+    --primary: #8a57e9;
+    --secondary: #4c75e6;
+    --light-blue: #a8dadc;
+    --dark-blue: #457b9d;
+    --darker-blue: #1d3557;
+    --red: #e63946;
+    --white: #f1faee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(
+        to right bottom,
+        transparent,
+        var(--light-blue)
+    );
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* index page  */
+
+.btn {
+    outline: 0;
+    border: 0;
+    height: 3em;
+    position: relative;
+    top: 20px;
+    border-radius: 3px;
+    background: var(--red);
+    color: var(--white);
+    font-weight: dark;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.btn i {
+    position: relative;
+    top: 2px;
+    left: 10px;
+    transition: left 0.2s ease-in-out;
+}
+
+.btn:hover i {
+    left: 40px;
+}
+
+.form-container {
+    margin-top: 30vh;
+    height: 350px;
+    width: 500px;
+    background: var(--light-blue);
+    border-radius: 5px;
+}
+
+.form-heading {
+    width: 100%;
+    height: 70px;
+    background: var(--dark-blue);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-heading h1 {
+    margin: 0;
+    font-family: "Shippori Antique B1", sans-serif;
+    color: var(--white);
+}
+
+.form {
+    height: 230px;
+    width: 60%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: var(--darker-blue);
+}
+
+form .form-control label {
+    display: block;
+}
+
+form .form-control input,
+form .form-control select {
+    margin-top: 3.5px;
+    width: 290px;
+    border: 0;
+    outline: 0;
+    height: 32px;
+    padding: 0;
+    padding-left: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+}
+form .form-control select {
+    height: 32px;
+    width: 300px;
+}
+
+.form-control option {
+    font-family: "Roboto", sans-serif;
+    background: #1f1f1f;
+    color: var(--white);
+}
+
+@media (max-width: 650px) {
+    .form-container {
+        height: 50%;
+        margin-top: 20vh;
+        width: 75%;
+    }
+
+    .form-heading {
+        font-size: 0.8em;
+    }
+
+    .form {
+        height: 270px;
+        width: 80%;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    form .form-control select {
+        width: 100%;
+    }
+
+    form .form-control input {
+        width: 96.2%;
+    }
+}
+@media (max-width: 480px) {
+    .btn:hover i {
+        left: 10%;
+    }
+}
+/* chat page  */
+
+.chat-container {
+    margin-top: 22vh;
+    height: 450px;
+    width: 700px;
+    background: var(--light-blue);
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background: var(--dark-blue);
+    border-radius: 5px 5px 0 0;
+}
+
+.chat-header h1 {
+    font-family: "Shippori Antique B1", sans-serif;
+    color: var(--white);
+    margin-left: 25px;
+}
+
+.chat-header .btn-leave {
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    background: var(--dark-blue);
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-weight: bold;
+    margin-right: 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.1s ease;
+}
+
+.chat-header .btn-leave:hover {
+    background: var(--white);
+    color: var(--dark-blue);
+}
+
+.chat-body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 75%;
+    background: #fff;
+}
+
+.chat-body .info {
+    background: var(--light-blue);
+    color: #2b2d42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info i {
+    margin-right: 5px;
+}
+
+.info h2 {
+    text-align: center;
+    background: #fff;
+    padding: 3px 0;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.info ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 139px;
+    overflow-y: scroll;
+}
+
+#users::-webkit-scrollbar {
+    width: 3px;
+}
+#users::-webkit-scrollbar-track {
+    background: var(--light-blue);
+}
+
+.info ul li {
+    text-align: center;
+    margin: 0.2rem 0;
+    color: #2b2d42;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: #fff;
+    padding: 3px 3px;
+    border-radius: 15px;
+}
+
+#messages::-webkit-scrollbar {
+    width: 10px;
+}
+#messages::-webkit-scrollbar-track {
+    background: lightgray;
+}
+#messages::-webkit-scrollbar-thumb {
+    background: gray;
+}
+.chat-body section.messages {
+    padding: 30px;
+    max-height: 411.75px;
+    overflow-y: scroll;
+}
+
+.chat-body .message {
+    background: lightcyan;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    color: #1f1f1f;
+    font-weight: bold;
+    width: max-content;
+    max-width: 95%;
+}
+
+.chat-body .message p:first-child {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.send-body {
+    width: 95%;
+    margin-inline: auto;
+}
+
+.chat-send {
+    background: var(--darker-blue);
+    height: 62px;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-send .chat-form {
+    display: flex;
+}
+
+.chat-send input {
+    margin-top: 3.5px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    height: 32px;
+    padding: 0;
+    padding-inline: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+}
+
+.chat-send .chat-form button {
+    outline: 0;
+    border: 0;
+    height: 2em;
+    width: 7em;
+    margin-top: 3px;
+    margin-left: 10px;
+    border-radius: 3px;
+    background: var(--red);
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.chat-send .chat-form button i {
+    position: relative;
+    right: 5px;
+    transition: all 0.1s ease;
+}
+
+.chat-send .chat-form button:hover i {
+    right: 0px;
+}
+
+@media (max-width: 780px) {
+    .chat-container {
+        margin-top: 18vh;
+        width: 75%;
+        height: 550px;
+    }
+
+    .chat-header h1 {
+        font-size: 1.4em;
+        margin-left: 15px;
+    }
+
+    .chat-header .btn-leave {
+        margin-right: 15px;
+        font-size: 0.7em;
+    }
+
+    .chat-body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr;
+        height: 80%;
+    }
+
+    .chat-body .info div:nth-of-type(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .chat-body .info div:nth-of-type(1) h3 {
+        font-size: 1em;
+    }
+
+    .chat-body .info div:nth-of-type(1) h2 {
+        font-size: 0.8em;
+        margin-top: 0;
+        margin-left: 10px;
+        border-radius: 20px;
+        padding: 3px 10px;
+    }
+
+    .chat-body .info div:nth-of-type(2) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .chat-body .info div:nth-of-type(2) h3 {
+        font-size: 1em;
+        margin-left: 35px;
+        margin-bottom: 7px;
+    }
+
+    .info ul {
+        max-width: 260px;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin: 0 auto;
+    }
+
+    .info ul li {
+        font-size: 0.8em;
+        padding: 3px 10px;
+        margin-right: 5px;
+    }
+
+    .chat-body section.messages {
+        padding: 15px;
+    }
+
+    .messages .message p {
+        overflow-wrap: break-word;
+    }
+
+    .chat-send .chat-form {
+        width: 95%;
+        margin-inline: auto;
+    }
+
+    .chat-send .chat-form button i {
+        right: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info ul {
+        max-width: 160px;
+    }
+
+    .chat-body .info div:nth-of-type(2) h3 {
+        margin-left: 20px;
+    }
+}
