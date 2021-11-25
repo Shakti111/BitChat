@@ -11,7 +11,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="./styles/style.css" />
-        <title>BitChat</title>
+        <title>BitChat | Chat With Your Friends In Real Time</title>
         <link
             rel="shortcut icon"
             type="image/jpg"
@@ -53,5 +53,14 @@
                 </form>
             </main>
         </div>
+        <script>
+            addEventListener("load", function () {
+                const viewport = document.querySelector("meta[name=viewport]");
+                viewport.setAttribute(
+                    "content",
+                    viewport.content + ", height=" + window.innerHeight
+                );
+            });
+        </script>
     </body>
 </html>

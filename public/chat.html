@@ -12,7 +12,7 @@
         />
         <link rel="stylesheet" href="./styles/style.css" />
 
-        <title>BitChat</title>
+        <title>BitChat | Chat With Your Friends In Real Time</title>
         <link
             rel="shortcut icon"
             type="image/jpg"
@@ -59,6 +59,15 @@
                 </div>
             </footer>
         </div>
+        <script>
+            addEventListener("load", function () {
+                const viewport = document.querySelector("meta[name=viewport]");
+                viewport.setAttribute(
+                    "content",
+                    viewport.content + ", height=" + window.innerHeight
+                );
+            });
+        </script>
         <script src="/socket.io/socket.io.js"></script>
         <script src="./scripts/app.js"></script>
     </body>
