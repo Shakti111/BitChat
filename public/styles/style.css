@@ -283,6 +283,8 @@ form .form-control select {
     padding: 30px;
     max-height: 411.75px;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-body .message {
@@ -295,6 +297,7 @@ form .form-control select {
     font-weight: bold;
     width: max-content;
     max-width: 95%;
+    margin-top: auto;
 }
 
 .chat-body .message p:first-child {
