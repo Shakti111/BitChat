@@ -354,12 +354,16 @@ form .form-control select {
     outline: 0;
     height: 32px;
     padding: 0;
+    margin: 0;
     padding-inline: 10px;
     font-weight: bold;
     border-radius: 3px;
     font-family: "Roboto", sans-serif;
-    /* border: 1px solid #cae9ff; */
-    background: #b8bedd;
+    border: 1px solid #dadce0;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+        rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+        rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 .chat-send .chat-form button {
