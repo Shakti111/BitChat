@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shippori+Antique+B1&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 /* font-family: "Roboto", sans-serif;
 font-family: 'Shippori Antique B1', sans-serif; */
 
@@ -20,11 +20,11 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         to right bottom,
         transparent,
         var(--light-blue)
-    );
+    ); */
     background-repeat: no-repeat;
 }
 
@@ -48,7 +48,7 @@ p {
     position: relative;
     top: 20px;
     border-radius: 3px;
-    background: var(--red);
+    background: #ff1654;
     color: var(--white);
     font-weight: dark;
     font-family: "Roboto", sans-serif;
@@ -72,24 +72,30 @@ p {
     margin-top: 30vh;
     height: 350px;
     width: 500px;
-    background: var(--light-blue);
+    /* background: var(--light-blue); */
+    border: 1px solid #dadce0;
     border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .form-heading {
     width: 100%;
     height: 70px;
-    background: var(--dark-blue);
+    /* background: var(--dark-blue); */
+    border-bottom: 1px solid #dadce0;
     border-radius: 5px 5px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .form-heading h1 {
     margin: 0;
     font-family: "Shippori Antique B1", sans-serif;
-    color: var(--white);
+    color: var(--darker-blue);
 }
 
 .form {
@@ -124,6 +130,8 @@ form .form-control select {
     padding: 0;
     padding-left: 10px;
     font-weight: bold;
+    border: 1px solid #dadce0;
+    background: #e2e5eb;
     border-radius: 3px;
     font-family: "Roboto", sans-serif;
 }
@@ -134,8 +142,8 @@ form .form-control select {
 
 .form-control option {
     font-family: "Roboto", sans-serif;
-    background: #1f1f1f;
-    color: var(--white);
+    background: #e2e5eb;
+    color: #1f1f1f;
 }
 
 @media (max-width: 650px) {
@@ -176,9 +184,11 @@ form .form-control select {
     margin-top: 22vh;
     height: 450px;
     width: 700px;
-    background: var(--light-blue);
+    /* background: var(--light-blue); */
     border-radius: 5px;
     font-family: "Roboto", sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .chat-header {
@@ -187,22 +197,25 @@ form .form-control select {
     align-items: center;
     height: 50px;
     width: 100%;
-    background: var(--dark-blue);
+    border: 1px solid #dadce0;
+    /* background: var(--dark-blue); */
     border-radius: 5px 5px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .chat-header h1 {
     font-family: "Shippori Antique B1", sans-serif;
-    color: var(--white);
+    color: var(--darker-blue);
     margin-left: 25px;
 }
 
 .chat-header .btn-leave {
     margin: 0;
     padding: 0.5rem 0.75rem;
-    background: var(--dark-blue);
-    border: 2px solid var(--white);
-    color: var(--white);
+    background: #fff;
+    border: 1px solid #1565c0;
+    color: #1565c0;
     font-weight: bold;
     margin-right: 25px;
     cursor: pointer;
@@ -213,19 +226,19 @@ form .form-control select {
 }
 
 .chat-header .btn-leave:hover {
-    background: var(--white);
-    color: var(--dark-blue);
+    background: #1565c0;
+    color: #fff;
 }
 
 .chat-body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     height: 75%;
-    background: #fff;
 }
 
 .chat-body .info {
-    background: var(--light-blue);
+    background: #e6e6ea;
+    border-right: 1px solid #dadce0;
     color: #2b2d42;
     display: flex;
     flex-direction: column;
@@ -233,16 +246,21 @@ form .form-control select {
     justify-content: space-evenly;
 }
 
-.info i {
-    margin-right: 5px;
+.info h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Outfit", sans-serif;
 }
 
 .info h2 {
     text-align: center;
     background: #fff;
-    padding: 3px 0;
+    padding: 3px 15px;
     margin-top: 10px;
-    border-radius: 25px;
+    border: 1px solid #dadce0;
+    border-radius: 7px;
+    color: #ff1654;
+    font-family: "Outfit", sans-serif;
 }
 
 .info ul {
@@ -256,28 +274,30 @@ form .form-control select {
     width: 3px;
 }
 #users::-webkit-scrollbar-track {
-    background: var(--light-blue);
+    background: #e6e6ea;
 }
 
 .info ul li {
     text-align: center;
     margin: 0.2rem 0;
-    color: #2b2d42;
     font-size: 0.9rem;
     font-weight: bold;
     background: #fff;
-    padding: 3px 3px;
-    border-radius: 15px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    border: 1px solid #dadce0;
+    color: #ff1654;
+    font-family: "Outfit", sans-serif;
 }
 
 #messages::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
 }
 #messages::-webkit-scrollbar-track {
-    background: lightgray;
+    background: transparent;
 }
 #messages::-webkit-scrollbar-thumb {
-    background: gray;
+    background: lightgray;
 }
 .chat-body section.messages {
     padding: 30px;
@@ -313,7 +333,9 @@ form .form-control select {
 }
 
 .chat-send {
-    background: var(--darker-blue);
+    /* background: var(--darker-blue); */
+    border: 1px solid #dadce0;
+    border-bottom: 0;
     height: 62px;
     border-radius: 0 0 5px 5px;
     display: flex;
@@ -336,6 +358,8 @@ form .form-control select {
     font-weight: bold;
     border-radius: 3px;
     font-family: "Roboto", sans-serif;
+    /* border: 1px solid #cae9ff; */
+    background: #b8bedd;
 }
 
 .chat-send .chat-form button {
@@ -346,8 +370,9 @@ form .form-control select {
     margin-top: 3px;
     margin-left: 10px;
     border-radius: 3px;
-    background: var(--red);
+    background: #ff1654;
     color: var(--white);
+
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     cursor: pointer;

@@ -52,7 +52,6 @@ const outputMessage = (msg) => {
 
 //Message from server
 socket.on("message", (message) => {
-    console.log(message);
     outputMessage(message);
     messages.scrollTop = messages.scrollHeight;
 });

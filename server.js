@@ -26,10 +26,8 @@ io.on("connection", (socket) => {
     //Listen for chatroom
 
     socket.on("joinRoom", ({ username, chatroom }) => {
-        console.log(username, chatroom);
         // Joining users
         const user = userJoin(socket.id, username, chatroom);
-        console.log(user);
         socket.join(user.chatroom);
         //welcome users
         socket.emit("message", formatMessage(botName, "Welcome to BitChat"));
